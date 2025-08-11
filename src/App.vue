@@ -12,7 +12,7 @@
             <a-sub-menu key="/products" @click="navigateTo('/products')">
               <template #title>
                 <span>产品中心</span>
-                <icon-down />
+                <!-- <icon-down /> -->
               </template>
               <a-menu-item key="/products/building" @click="navigateTo('/products?category=building')">
                 <icon-apps />
