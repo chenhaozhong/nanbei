@@ -81,24 +81,24 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { ref } from 'vue'
 import gsap from 'gsap'
 
 // 核心技术数据
 const coreTechnologies = ref([
   {
-    icon: '../assets/tech/tech-icon1.svg',
+    icon: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=80&h=80&fit=crop',
     title: '钢化技术',
     description: '采用先进的钢化工艺，提高玻璃强度和安全性能'
   },
   {
-    icon: '../assets/tech/tech-icon2.svg',
+    icon: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=80&h=80&fit=crop',
     title: '镀膜技术',
     description: '精密镀膜技术，实现玻璃的节能、防紫外线等特殊功能'
   },
   {
-    icon: '../assets/tech/tech-icon3.svg',
+    icon: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=80&h=80&fit=crop',
     title: '智能调光',
     description: '创新调光技术，实现玻璃透明度的智能控制'
   }
@@ -162,25 +162,25 @@ const teamStats = ref([
 // 技术认证
 const certifications = ref([
   {
-    image: '../assets/tech/cert1.jpg',
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&h=150&fit=crop',
     name: 'ISO9001认证',
     description: '国际质量管理体系认证'
   },
   {
-    image: '../assets/tech/cert2.jpg',
+    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=200&h=150&fit=crop',
     name: '国家高新技术企业',
     description: '技术创新能力认证'
   },
   {
-    image: '../assets/tech/cert3.jpg',
+    image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=200&h=150&fit=crop',
     name: '产品质量认证',
     description: '产品性能和安全认证'
   }
 ])
 
 // 技术卡片动画
-const animateTechCard = (event: MouseEvent) => {
-  const card = event.currentTarget as HTMLElement
+const animateTechCard = (event) => {
+  const card = event.currentTarget
   gsap.to(card, {
     scale: 1.05,
     duration: 0.3,
@@ -194,6 +194,7 @@ const animateTechCard = (event: MouseEvent) => {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
+  padding-top: 120px; /* 调整顶部间距为120px */
 }
 
 .page-header {

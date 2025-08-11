@@ -83,7 +83,7 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { ref, computed } from 'vue'
 
 const activeCategory = ref('all')
@@ -157,7 +157,7 @@ const totalNews = computed(() => {
 })
 
 // 获取分类名称
-const getCategoryName = (category: string) => {
+const getCategoryName = (category) => {
   const categoryMap = {
     company: '公司动态',
     industry: '行业资讯',
@@ -179,7 +179,7 @@ const closeNewsDetail = () => {
 }
 
 // 切换页码
-const handlePageChange = (page: number) => {
+const handlePageChange = (page) => {
   currentPage.value = page
 }
 </script>
@@ -189,6 +189,7 @@ const handlePageChange = (page: number) => {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
+  padding-top: 120px; /* 调整顶部间距为120px */
 }
 
 .page-header {

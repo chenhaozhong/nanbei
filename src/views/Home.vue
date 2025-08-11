@@ -75,7 +75,7 @@
           </a-button>
         </div>
         <div class="intro-image glass-effect">
-          <img src="@/assets/company.jpg" alt="Company" />
+          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=300&fit=crop" alt="Company" />
         </div>
       </div>
     </section>
@@ -126,40 +126,17 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { IconRight, IconCheckCircle } from '@arco-design/web-vue/es/icon'
 import gsap from 'gsap'
 import 'animate.css'
 
-interface Slide {
-  image: string
-  title: string
-  description: string
-  link: string
-}
-
-interface Category {
-  id: string
-  name: string
-  description: string
-  image: string
-}
-
-interface News {
-  id: number
-  title: string
-  summary: string
-  date: string
-  image: string
-  category: string
-}
-
 const router = useRouter()
 const activeSlideAnimation = ref('animate__fadeIn')
 
-const heroSlides = ref<Slide[]>([
+const heroSlides = ref([
   {
     image: 'https://www.deli1996.com/uploadfile/202505/37648c780d6eef.jpg',
     title: '创新玻璃解决方案',
@@ -180,7 +157,7 @@ const heroSlides = ref<Slide[]>([
   }
 ])
 
-const productCategories = ref<Category[]>([
+const productCategories = ref([
   {
     id: 'building',
     name: '建筑玻璃',
@@ -207,7 +184,7 @@ const productCategories = ref<Category[]>([
   }
 ])
 
-const latestNews = ref<News[]>([
+const latestNews = ref([
   {
     id: 1,
     title: '公司参加2024国际玻璃展览会',
@@ -234,11 +211,11 @@ const latestNews = ref<News[]>([
   }
 ])
 
-const navigateTo = (path: string) => {
+const navigateTo = (path) => {
   router.push(path)
 }
 
-const formatDate = (dateString: string) => {
+const formatDate = (dateString) => {
   const date = new Date(dateString)
   return {
     day: date.getDate(),
@@ -246,8 +223,8 @@ const formatDate = (dateString: string) => {
   }
 }
 
-const animateCard = (event: MouseEvent) => {
-  const card = event.currentTarget as HTMLElement
+const animateCard = (event) => {
+  const card = event.currentTarget
   gsap.to(card, {
     scale: 1.02,
     duration: 0.3,
@@ -280,6 +257,7 @@ onMounted(() => {
   position: relative;
   height: 100vh;
   min-height: 600px;
+  padding-top: 120px; /* 调整顶部间距为120px */
 }
 
 .hero-carousel {
@@ -517,7 +495,7 @@ onMounted(() => {
 .contact-section {
   position: relative;
   height: 300px;
-  background-image: url('@/assets/contact-bg.jpg');
+  background-image: url('https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?w=1200&h=300&fit=crop');
   background-size: cover;
   background-position: center;
   margin-top: 80px;

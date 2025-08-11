@@ -39,7 +39,7 @@
         </a-col>
         <a-col :span="12">
           <div class="section-image">
-            <img src="../assets/about/company.jpg" alt="公司简介" />
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=500&h=400&fit=crop" alt="公司简介" />
           </div>
         </a-col>
       </a-row>
@@ -102,7 +102,7 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { ref } from 'vue'
 
 const historyData = ref([
@@ -140,17 +140,17 @@ const historyData = ref([
 
 const cultureData = ref([
   {
-    icon: '../assets/about/culture-quality.svg',
+    icon: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=80&h=80&fit=crop',
     title: '质量至上',
     description: '严格把控每一个生产环节，确保产品品质'
   },
   {
-    icon: '../assets/about/culture-innovation.svg',
+    icon: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=80&h=80&fit=crop',
     title: '创新驱动',
     description: '持续投入研发，推动技术创新'
   },
   {
-    icon: '../assets/about/culture-service.svg',
+    icon: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=80&h=80&fit=crop',
     title: '服务为本',
     description: '以客户需求为导向，提供专业解决方案'
   }
@@ -196,6 +196,7 @@ const partnersData = ref([
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
+  padding-top: 120px; /* 调整顶部间距为120px */
 }
 
 .page-header {

@@ -1,6 +1,6 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 
-const routes: Array<RouteRecordRaw> = [
+const routes = [
   {
     path: '/',
     name: 'Home',
@@ -31,18 +31,18 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('../views/Technology.vue'),
     meta: { title: '技术实力' }
   },
-//   {
-//     path: '/cases',
-//     name: 'Cases',
-//     component: () => import('../views/Cases.vue'),
-//     meta: { title: '工程案例' }
-//   },
-//   {
-//     path: '/contact',
-//     name: 'Contact',
-//     component: () => import('../views/Contact.vue'),
-//     meta: { title: '联系我们' }
-//   }
+  {
+    path: '/cases',
+    name: 'Cases',
+    component: () => import('../views/Cases.vue'),
+    meta: { title: '工程案例' }
+  },
+  {
+    path: '/contact',
+    name: 'Contact',
+    component: () => import('../views/Contact.vue'),
+    meta: { title: '联系我们' }
+  }
 ]
 
 const router = createRouter({
