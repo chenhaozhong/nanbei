@@ -257,7 +257,7 @@ onMounted(() => {
   position: relative;
   height: 100vh;
   min-height: 600px;
-  padding-top: 120px; /* 调整顶部间距为120px */
+  padding-top: 70px; /* 调整顶部间距为120px */
 }
 
 .hero-carousel {
